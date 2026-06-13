@@ -1,6 +1,6 @@
 import { motion } from "framer-motion";
 import { GraduationCap, Heart, Target } from "lucide-react";
-import portrait from "@/assets/vinto-profil.png";
+import portrait from "@/assets/profil-stikom-vinto.png";
 import { GlassCard } from "./GlassCard";
 import { SectionHeading } from "./SectionHeading";
 import { useLanguage } from "@/hooks/use-language";
@@ -17,7 +17,7 @@ export function About() {
       <div className="mx-auto max-w-6xl px-6">
         <SectionHeading eyebrow={t("about.eyebrow")} title={t("about.title")} align="left" />
 
-        <div className="mt-16 grid gap-12 lg:grid-cols-[1fr_1.2fr] lg:items-start">
+        <div className="mt-16 grid gap-12 lg:grid-cols-[1fr_1.2fr] lg:items-center">
           <motion.div
             initial={{ opacity: 0, y: 30, filter: "blur(10px)" }}
             whileInView={{ opacity: 1, y: 0, filter: "blur(0px)" }}
@@ -33,7 +33,7 @@ export function About() {
                   loading="lazy"
                   width={896}
                   height={1152}
-                  className="h-full w-full object-cover grayscale"
+                  className="h-full w-full object-cover object-top grayscale"
                 />
               </div>
               <div className="px-4 py-4">
@@ -53,9 +53,6 @@ export function About() {
             >
               {t("about.lead")}
             </motion.p>
-            <p className="mt-6 text-base leading-relaxed text-ink-muted">
-              {t("about.body")}
-            </p>
 
             <div className="mt-10 grid gap-4 sm:grid-cols-3">
               {items.map((it, i) => (

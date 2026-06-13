@@ -74,14 +74,18 @@ export function Hero() {
               <ArrowUpRight className="h-4 w-4 transition-transform group-hover:translate-x-0.5 group-hover:-translate-y-0.5" />
             </Link>
             <a
-              href="#"
+              href="https://drive.google.com/file/d/1G4wCZhU1RnkLCMQe-p_9VBH93wHnLrtB/view?usp=sharing"
+              target="_blank"
+              rel="noopener noreferrer"
               className="group inline-flex items-center gap-2 rounded-full bg-ink px-6 py-3 text-sm font-medium text-background transition-all hover:scale-[1.02] hover:shadow-[0_10px_40px_-10px] hover:shadow-ink/40"
             >
               {t("hero.ctaCv")}
               <ArrowUpRight className="h-4 w-4 transition-transform group-hover:translate-x-0.5 group-hover:-translate-y-0.5" />
             </a>
-            <Link
-              to="/contact"
+            <a
+              href="https://wa.me/6282342720005"
+              target="_blank"
+              rel="noopener noreferrer"
               className="glass inline-flex items-center gap-2 rounded-full px-6 py-3 text-sm font-medium text-ink transition-all hover:scale-[1.02]"
             >
               <svg
@@ -100,7 +104,7 @@ export function Hero() {
                 <path d="M9 10a.5 .5 0 0 0 1 0v-1a.5 .5 0 0 0 -1 0v1a5 5 0 0 0 5 5h1a.5 .5 0 0 0 0 -1h-1a.5 .5 0 0 0 0 1" />
               </svg>
               {t("hero.ctaContact")}
-            </Link>
+            </a>
           </motion.div>
 
           <motion.div
@@ -123,43 +127,65 @@ export function Hero() {
           transition={{ duration: 1.1, delay: 0.2, ease: [0.22, 1, 0.36, 1] }}
           className="relative mx-auto w-full max-w-md"
         >
-          <div className="glass-strong relative overflow-hidden rounded-[2rem] p-3">
-            <div className="absolute inset-0 opacity-60" style={{ background: "var(--gradient-sheen)" }} />
-            <div className="relative aspect-[4/5] overflow-hidden rounded-[1.5rem] bg-ink/5">
-              <img
-                src={portrait}
-                alt="Vinto portrait"
-                width={896}
-                height={1152}
-                className="h-full w-full object-cover"
-              />
-              <div className="absolute inset-x-0 bottom-0 h-1/2 bg-gradient-to-t from-black/70 to-transparent" />
-              <div className="absolute bottom-4 left-4 right-4 flex items-end justify-between text-white">
-                <div>
-                  <div className="text-[10px] uppercase tracking-[0.3em] opacity-70">{t("hero.basedIn")}</div>
-                  <div className="font-display text-xl">{t("hero.basedInValue")}</div>
-                </div>
-                <div className="text-right">
-                  <div className="text-[10px] uppercase tracking-[0.3em] opacity-70">{t("hero.focus")}</div>
-                  <div className="font-display text-xl">AI · UI/UX</div>
+          <motion.div
+            animate={{ y: [0, -10, 0] }}
+            transition={{ repeat: Infinity, duration: 6, ease: "easeInOut" }}
+          >
+            <motion.div
+              drag
+              dragConstraints={{ left: -100, right: 100, top: -100, bottom: 100 }}
+              whileDrag={{ scale: 1.02 }}
+              className="glass-strong relative overflow-hidden rounded-[2rem] p-3 cursor-grab active:cursor-grabbing"
+            >
+              <div className="absolute inset-0 opacity-60" style={{ background: "var(--gradient-sheen)" }} />
+              <div className="relative aspect-[4/5] overflow-hidden rounded-[1.5rem] bg-ink/5 pointer-events-none">
+                <img
+                  src={portrait}
+                  alt="Vinto portrait"
+                  width={896}
+                  height={1152}
+                  className="h-full w-full object-cover"
+                />
+                <div className="absolute inset-x-0 bottom-0 h-1/2 bg-gradient-to-t from-black/70 to-transparent" />
+                <div className="absolute bottom-4 left-4 right-4 flex items-end justify-between text-white">
+                  <div>
+                    <div className="text-[10px] uppercase tracking-[0.3em] opacity-70">{t("hero.basedIn")}</div>
+                    <div className="font-display text-xl">{t("hero.basedInValue")}</div>
+                  </div>
+                  <div className="text-right">
+                    <div className="text-[10px] uppercase tracking-[0.3em] opacity-70">{t("hero.focus")}</div>
+                    <div className="font-display text-xl">AI · UI/UX</div>
+                  </div>
                 </div>
               </div>
-            </div>
-          </div>
+            </motion.div>
+          </motion.div>
 
           <motion.div
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ delay: 1, duration: 0.6 }}
-            className="glass absolute -bottom-6 -left-6 hidden rounded-2xl px-4 py-3 sm:block"
+            className="absolute -bottom-6 -left-6 hidden sm:block z-10"
           >
-            <div className="flex items-center gap-3">
-              <div className="h-2 w-2 animate-pulse rounded-full bg-emerald-500" />
-              <div>
-                <div className="text-[10px] uppercase tracking-[0.2em] text-ink-muted">{t("hero.status")}</div>
-                <div className="text-sm font-medium text-ink">{t("hero.statusValue")}</div>
-              </div>
-            </div>
+            <motion.div
+              animate={{ y: [0, 8, 0] }}
+              transition={{ repeat: Infinity, duration: 5, ease: "easeInOut", delay: 1 }}
+            >
+              <motion.div
+                drag
+                dragConstraints={{ left: -150, right: 150, top: -150, bottom: 150 }}
+                whileDrag={{ scale: 1.1 }}
+                className="glass rounded-2xl px-4 py-3 cursor-grab active:cursor-grabbing"
+              >
+                <div className="flex items-center gap-3 pointer-events-none">
+                  <div className="h-2 w-2 animate-pulse rounded-full bg-emerald-500" />
+                  <div>
+                    <div className="text-[10px] uppercase tracking-[0.2em] text-ink-muted">{t("hero.status")}</div>
+                    <div className="text-sm font-medium text-ink">{t("hero.statusValue")}</div>
+                  </div>
+                </div>
+              </motion.div>
+            </motion.div>
           </motion.div>
         </motion.div>
       </div>

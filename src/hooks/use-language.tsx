@@ -22,8 +22,8 @@ const en: Dict = {
   "hero.eyebrow": "Hello, I'm Vinto",
   "hero.titleA": "Building digital",
   "hero.titleEm": "experiences",
-  "hero.titleB": "with AI & technology.",
-  "hero.desc": "Computer Technology student passionate about AI, UI/UX design, web development, and emerging technologies.",
+  "hero.titleB": "with Design & technology.",
+  "hero.desc": "Information System student passionate about AI, UI/UX design, web development, and emerging technologies.",
   "hero.ctaPortfolio": "View Portfolio",
   "hero.ctaCv": "View CV",
   "hero.ctaContact": "Contact Me",
@@ -37,12 +37,12 @@ const en: Dict = {
 
   // about
   "about.eyebrow": "About",
-  "about.title": "A quiet obsession with the details.",
+  "about.title": "A Brief Introduction About Me.",
   "about.role": "Designer · Developer · Student",
-  "about.lead": "I'm a Computer Technology student who believes great software is equal parts engineering rigor and editorial taste — quiet, intentional, and a little cinematic.",
+  "about.lead": "I am an Information System student who believes in lifelong learning. I am interested in UI/UX, artificial intelligence, and web development. Beyond technology, I am also interested in business, music, and public speaking.",
   "about.body": "My work lives at the intersection of artificial intelligence, interface design, and modern web development. I spend my time prototyping with new tools, studying how interfaces feel, and shipping experiments that turn complex technology into something delightful.",
   "about.cards.education.title": "Education",
-  "about.cards.education.body": "Computer Technology student exploring the intersection of software, design, and intelligent systems.",
+  "about.cards.education.body": "Information System student exploring the intersection of software, design, and intelligent systems.",
   "about.cards.interests.title": "Interests",
   "about.cards.interests.body": "Artificial intelligence, generative tools, design systems, and the craft of building products that feel alive.",
   "about.cards.goals.title": "Career Goals",
@@ -50,8 +50,8 @@ const en: Dict = {
 
   // skills
   "skills.eyebrow": "Skills & Expertise",
-  "skills.title": "The craft, the tools, the language.",
-  "skills.desc": "A monochrome stack of the disciplines and software I rely on every day.",
+  "skills.title": "Skills and tools that I used",
+  "skills.desc": "The skills and tools I currently hone and use every day.",
   "skills.technical": "Technical",
   "skills.disciplines": "06 disciplines",
   "skills.tools": "Tools",
@@ -60,7 +60,7 @@ const en: Dict = {
   "skill.ai": "Artificial Intelligence",
   "skill.web": "Web Development",
   "skill.uiux": "UI/UX Design",
-  "skill.frontend": "Frontend Development",
+  "skill.frontend": "Graphic Design",
   "skill.prompt": "Prompt Engineering",
   "skill.vibe": "Vibe Coding",
 
@@ -71,20 +71,22 @@ const en: Dict = {
   "portfolio.filter.all": "All",
   "portfolio.live": "Live Demo",
   "portfolio.github": "GitHub",
-  "proj.sikom.title": "SIKOM Information System",
-  "proj.sikom.desc": "A centralized information portal designed for a campus computer department, focused on clarity and fast access.",
-  "proj.mobile.title": "Mobile UI/UX Startup",
-  "proj.mobile.desc": "End-to-end product design for a startup mobile app — research, flows, prototyping, and a polished visual system.",
-  "proj.ai.title": "AI-Powered Website Builder",
-  "proj.ai.desc": "Generative interface that turns natural language prompts into production-ready landing pages.",
-  "proj.innov.title": "Digital Innovation Project",
-  "proj.innov.desc": "A research-driven concept exploring how everyday workflows can be reimagined with intelligent assistants.",
+  "proj.sikom.title": "First Portfolio Website",
+  "proj.sikom.desc": "Created a portfolio website using HTML, CSS, and JS to showcase my work and experience while learning. It will be deployed using Netlify.",
+  "proj.mobile.title": "Tukareen Mobile App Front-end",
+  "proj.mobile.desc": "Developed the initial frontend code, translating design into code using the Dart language and Flutter framework.",
+  "proj.ai.title": "Telegram Expenses Automation",
+  "proj.ai.desc": "Building expense tracking automation in a telegram bot, directly recorded in a google spreadsheet - made for learning at DevFest Bali 2025",
+  "proj.innov.title": "UI/UX Carelora Healthy App",
+  "proj.innov.desc": "Created a UI/UX project as a participant in the Invention 2025 Competition at Udayana University - Carelora is a mobile-based health consultation application.",
+  "proj.hso.title": "Graphic Design HSO Ice Cream CNY 2026",
+  "proj.hso.desc": "Creating graphic designs for HSO Ice Cream products, including product tags and seals for the Chinese New Year 2026 campaign.",
 
   // more
   "more.eyebrow": "More About Me",
   "more.title": "A wider look at the work and the person.",
   "more.cards.education.title": "Education",
-  "more.cards.education.body": "Computer Technology — currently in formal study, continuously self-taught beyond the syllabus.",
+  "more.cards.education.body": "Information System — currently in formal study, continuously self-taught beyond the syllabus.",
   "more.cards.certs.title": "Certifications",
   "more.cards.certs.body": "AI fundamentals, modern frontend, UI/UX design — accumulating a deep, practical foundation.",
   "more.cards.orgs.title": "Organizations",
@@ -165,8 +167,8 @@ const id: Dict = {
   "hero.eyebrow": "Halo, saya Vinto",
   "hero.titleA": "Membangun",
   "hero.titleEm": "pengalaman",
-  "hero.titleB": "digital dengan AI & teknologi.",
-  "hero.desc": "Mahasiswa Teknologi Komputer yang antusias pada AI, desain UI/UX, pengembangan web, dan teknologi baru.",
+  "hero.titleB": "digital dengan Desain & teknologi.",
+  "hero.desc": "Mahasiswa Sistem Informasi yang antusias pada AI, desain UI/UX, pengembangan web, dan teknologi baru.",
   "hero.ctaPortfolio": "Lihat Portofolio",
   "hero.ctaCv": "Lihat CV",
   "hero.ctaContact": "Hubungi Saya",
@@ -179,20 +181,20 @@ const id: Dict = {
   "hero.scroll": "Gulir ke tentang",
 
   "about.eyebrow": "Tentang",
-  "about.title": "Obsesi tenang pada detail.",
+  "about.title": "Perkenalan Singkat Tentang Saya.",
   "about.role": "Desainer · Pengembang · Mahasiswa",
-  "about.lead": "Saya mahasiswa Teknologi Komputer yang percaya perangkat lunak hebat lahir dari perpaduan ketelitian teknis dan selera editorial — tenang, terarah, dan sedikit sinematik.",
+  "about.lead": "Saya mahasiswa Sistem Informasi yang memiliki prinsip belajar sepanjang masa. Saya tertarik pada UI/UX, kecerdasan buatan, dan website. Tidak hanya di bidang teknologi, saya juga tertarik pada bisnis, musik, dan public speaking.",
   "about.body": "Karya saya berada di persimpangan kecerdasan buatan, desain antarmuka, dan pengembangan web modern. Saya menghabiskan waktu untuk membuat prototipe dengan alat baru, mempelajari nuansa antarmuka, dan merilis eksperimen yang mengubah teknologi rumit menjadi sesuatu yang menyenangkan.",
   "about.cards.education.title": "Pendidikan",
-  "about.cards.education.body": "Mahasiswa Teknologi Komputer yang menjelajahi titik temu perangkat lunak, desain, dan sistem cerdas.",
+  "about.cards.education.body": "Mahasiswa Sistem Informasi yang menjelajahi titik temu perangkat lunak, desain, dan sistem cerdas.",
   "about.cards.interests.title": "Minat",
   "about.cards.interests.body": "Kecerdasan buatan, alat generatif, sistem desain, dan seni membangun produk yang terasa hidup.",
   "about.cards.goals.title": "Tujuan Karier",
   "about.cards.goals.body": "Membangun produk digital yang berpusat pada manusia dan membentuk cara orang berinteraksi dengan teknologi baru.",
 
   "skills.eyebrow": "Keahlian & Keterampilan",
-  "skills.title": "Keterampilan, alat, dan bahasanya.",
-  "skills.desc": "Tumpukan monokrom berisi disiplin dan perangkat lunak yang saya andalkan setiap hari.",
+  "skills.title": "Kemampuan, dan alat yang saya gunakan.",
+  "skills.desc": "Kemampuan dan tools yang saat ini saya asah, dan gunakan sehari-hari.",
   "skills.technical": "Teknis",
   "skills.disciplines": "06 disiplin",
   "skills.tools": "Alat",
@@ -201,7 +203,7 @@ const id: Dict = {
   "skill.ai": "Kecerdasan Buatan",
   "skill.web": "Pengembangan Web",
   "skill.uiux": "Desain UI/UX",
-  "skill.frontend": "Pengembangan Frontend",
+  "skill.frontend": "Desain Grafis",
   "skill.prompt": "Rekayasa Prompt",
   "skill.vibe": "Vibe Coding",
 
@@ -211,19 +213,21 @@ const id: Dict = {
   "portfolio.filter.all": "Semua",
   "portfolio.live": "Demo Langsung",
   "portfolio.github": "GitHub",
-  "proj.sikom.title": "Sistem Informasi SIKOM",
-  "proj.sikom.desc": "Portal informasi terpusat untuk departemen komputer kampus, fokus pada kejelasan dan akses cepat.",
-  "proj.mobile.title": "UI/UX Startup Mobile",
-  "proj.mobile.desc": "Desain produk end-to-end untuk aplikasi mobile startup — riset, alur, prototipe, dan sistem visual yang rapi.",
-  "proj.ai.title": "Website Builder Bertenaga AI",
-  "proj.ai.desc": "Antarmuka generatif yang mengubah prompt bahasa alami menjadi halaman landing siap produksi.",
-  "proj.innov.title": "Proyek Inovasi Digital",
-  "proj.innov.desc": "Konsep berbasis riset yang mengeksplorasi bagaimana alur kerja sehari-hari dapat dibayangkan ulang dengan asisten cerdas.",
+  "proj.sikom.title": "Website Portofolio Pertama",
+  "proj.sikom.desc": "Membuat website portofolio dengan menggunakan HTML, CSS, dan JS untuk menampilkan hasil karya dan pengalaman saya, sekaligus belajar, dan akan di-deploy dengan Netlify.",
+  "proj.mobile.title": "Front-end mobile Aplikasi Tukareen",
+  "proj.mobile.desc": "Membuat bagian tampilan awal kode, implementasi dari desain menjadi kode dengan bahasa Dart dan menggunakan framework Flutter.",
+  "proj.ai.title": "Otomatisasi Pengeluaran Telegram",
+  "proj.ai.desc": "Membuat automation pencatatan pengeluaran di telegram bot, langsung tercatat di google spreadsheet - dibuat dalam rangka belajar di DevFest Bali 2025",
+  "proj.innov.title": "UI/UX Carelora Healthy App",
+  "proj.innov.desc": "Membuat proyek UI/UX sebagai peserta Lomba Invention 2025 di Universitas Udayana - Carelora adalah Aplikasi konsultasi kesehatan berbasis mobile.",
+  "proj.hso.title": "Graphic Design HSO Ice Cream CNY 2026",
+  "proj.hso.desc": "Membuat desain grafis untuk keperluan dari produk HSO Ice Cream. Yang mana membuat desain product tag, dan seal. Untuk kebutuhan Chinese New Year 2026.",
 
   "more.eyebrow": "Lebih Banyak Tentang Saya",
   "more.title": "Pandangan lebih luas tentang karya dan pribadinya.",
   "more.cards.education.title": "Pendidikan",
-  "more.cards.education.body": "Teknologi Komputer — sedang menjalani studi formal, dan terus belajar mandiri di luar kurikulum.",
+  "more.cards.education.body": "Sistem Informasi — sedang menjalani studi formal, dan terus belajar mandiri di luar kurikulum.",
   "more.cards.certs.title": "Sertifikasi",
   "more.cards.certs.body": "Dasar AI, frontend modern, desain UI/UX — membangun fondasi praktis yang mendalam.",
   "more.cards.orgs.title": "Organisasi",
@@ -300,13 +304,13 @@ export function LanguageProvider({ children }: { children: ReactNode }) {
       const stored = localStorage.getItem("vinto-lang") as Lang | null;
       if (stored === "en" || stored === "id") setLangState(stored);
       else if (typeof navigator !== "undefined" && navigator.language?.toLowerCase().startsWith("id")) setLangState("id");
-    } catch {}
+    } catch { }
     setMounted(true);
   }, []);
 
   const setLang = (l: Lang) => {
     setLangState(l);
-    try { localStorage.setItem("vinto-lang", l); } catch {}
+    try { localStorage.setItem("vinto-lang", l); } catch { }
     if (typeof document !== "undefined") document.documentElement.lang = l;
   };
   const toggle = () => setLang(lang === "en" ? "id" : "en");

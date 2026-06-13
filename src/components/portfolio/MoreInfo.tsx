@@ -23,10 +23,10 @@ export function MoreInfo() {
     { icon: Music, title: t("more.cards.hobbies.title"), text: t("more.cards.hobbies.body") },
   ];
   const stats = [
-    { label: t("more.stats.projects"), value: 24, suffix: "+" },
-    { label: t("more.stats.tech"), value: 30, suffix: "+" },
-    { label: t("more.stats.years"), value: 3, suffix: "" },
-    { label: t("more.stats.certs"), value: 8, suffix: "" },
+    { label: t("more.stats.projects"), value: 5, suffix: "+" },
+    { label: t("more.stats.tech"), value: 5, suffix: "+" },
+    { label: t("more.stats.years"), value: 2, suffix: "" },
+    { label: t("more.stats.certs"), value: 5, suffix: "" },
   ];
 
   return (

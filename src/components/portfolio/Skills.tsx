@@ -3,15 +3,15 @@ import { SectionHeading } from "./SectionHeading";
 import { GlassCard } from "./GlassCard";
 import { useLanguage } from "@/hooks/use-language";
 
-const tools = ["Figma", "Lovable", "Bolt.new", "Vercel", "GitHub", "VS Code"];
+const tools = ["Figma", "Lovable", "Canva", "LLM (ChatGPT, Gemini)", "GitHub", "Antigravity"];
 
 export function Skills() {
   const { t } = useLanguage();
   const technical = [
-    { name: t("skill.ai"), level: 85 },
-    { name: t("skill.web"), level: 90 },
-    { name: t("skill.uiux"), level: 88 },
-    { name: t("skill.frontend"), level: 92 },
+    { name: t("skill.ai"), level: 80 },
+    { name: t("skill.web"), level: 80 },
+    { name: t("skill.uiux"), level: 90 },
+    { name: t("skill.frontend"), level: 85 },
     { name: t("skill.prompt"), level: 95 },
     { name: t("skill.vibe"), level: 90 },
   ];

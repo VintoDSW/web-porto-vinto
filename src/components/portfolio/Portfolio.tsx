@@ -1,47 +1,62 @@
 import { useState } from "react";
 import { motion, AnimatePresence } from "framer-motion";
-import { ArrowUpRight, Github } from "lucide-react";
+import { ArrowUpRight, Github, Palette } from "lucide-react";
 import { SectionHeading } from "./SectionHeading";
 import { GlassCard } from "./GlassCard";
 import { cn } from "@/lib/utils";
 import { useLanguage } from "@/hooks/use-language";
+import n8nImg from "@/assets/n8n1_portfolio_vinto.png";
+import hsoImg from "@/assets/HSO ICE CREAM CNY26_portofolio_vinto.png";
+import flutterImg from "@/assets/flutter1_portfolio_vinto.png";
+import webImg from "@/assets/webporto1-vinto.png";
+import uiuxImg from "@/assets/uiux1_carelora_astungkarahoki.png";
 
-type Cat = "All" | "Web" | "Mobile" | "UI/UX" | "AI";
+type Cat = "All" | "Web" | "Mobile" | "UI/UX" | "AI" | "Design";
 
-const filters: Cat[] = ["All", "Web", "Mobile", "UI/UX", "AI"];
+const filters: Cat[] = ["All", "Web", "Mobile", "UI/UX", "AI", "Design"];
 
 export function Portfolio() {
   const { t } = useLanguage();
   const [active, setActive] = useState<Cat>("All");
 
-  const projects: { titleKey: string; descKey: string; stack: string[]; cat: Exclude<Cat, "All">; img: string }[] = [
+  const projects: { titleKey: string; descKey: string; stack: string[]; cat: Exclude<Cat, "All">; img: string; liveLink?: string; githubLink?: string; canvaLink?: string }[] = [
     {
       titleKey: "proj.sikom.title",
       descKey: "proj.sikom.desc",
-      stack: ["Next.js", "TypeScript", "Tailwind"],
+      stack: ["website", "front-end", "landing page"],
       cat: "Web",
-      img: "https://images.unsplash.com/photo-1551288049-bebda4e38f71?w=800&h=600&fit=crop&sat=-100",
+      img: webImg,
     },
     {
       titleKey: "proj.mobile.title",
       descKey: "proj.mobile.desc",
-      stack: ["Figma", "Prototyping", "Design System"],
+      stack: ["mobile", "front-end", "flutter"],
       cat: "Mobile",
-      img: "https://images.unsplash.com/photo-1512941937669-90a1b58e7e9c?w=800&h=600&fit=crop&sat=-100",
+      img: flutterImg,
     },
     {
       titleKey: "proj.ai.title",
       descKey: "proj.ai.desc",
-      stack: ["AI", "React", "LLMs"],
+      stack: ["AI Automation", "n8n", "telegram"],
       cat: "AI",
-      img: "https://images.unsplash.com/photo-1677442136019-21780ecad995?w=800&h=600&fit=crop&sat=-100",
+      img: n8nImg,
+      liveLink: "https://t.me/Devfest_Vinto_Automation_bot",
+      githubLink: "https://github.com/VintoDSW/website-portfolio-pertama",
     },
     {
       titleKey: "proj.innov.title",
       descKey: "proj.innov.desc",
-      stack: ["UX Research", "Prototype", "AI"],
+      stack: ["UI/UX", "prototype", "team competition"],
       cat: "UI/UX",
-      img: "https://images.unsplash.com/photo-1559028012-481c04fa702d?w=800&h=600&fit=crop&sat=-100",
+      img: uiuxImg,
+    },
+    {
+      titleKey: "proj.hso.title",
+      descKey: "proj.hso.desc",
+      stack: ["Graphic Design", "Product Tag", "Seal"],
+      cat: "Design",
+      img: hsoImg,
+      canvaLink: "#",
     },
   ];
 
@@ -63,17 +78,10 @@ export function Portfolio() {
               key={f}
               onClick={() => setActive(f)}
               className={cn(
-                "relative rounded-full px-4 py-2 text-sm transition-colors",
-                active === f ? "text-background" : "glass text-ink-muted hover:text-ink",
+                "rounded-full px-4 py-2 text-sm transition-colors",
+                active === f ? "bg-ink text-background" : "glass text-ink-muted hover:text-ink",
               )}
             >
-              {active === f && (
-                <motion.span
-                  layoutId="filter-active"
-                  className="absolute inset-0 -z-10 rounded-full bg-ink"
-                  transition={{ type: "spring", stiffness: 300, damping: 30 }}
-                />
-              )}
               {label(f)}
             </button>
           ))}
@@ -120,17 +128,32 @@ export function Portfolio() {
                     </div>
                     <div className="mt-6 flex gap-2">
                       <a
-                        href="#"
+                        href={p.liveLink || "#"}
+                        target={p.liveLink ? "_blank" : undefined}
+                        rel={p.liveLink ? "noopener noreferrer" : undefined}
                         className="inline-flex items-center gap-1.5 rounded-full bg-ink px-4 py-2 text-xs font-medium text-background transition-transform hover:scale-105"
                       >
                         {t("portfolio.live")} <ArrowUpRight className="h-3 w-3" />
                       </a>
-                      <a
-                        href="#"
-                        className="glass inline-flex items-center gap-1.5 rounded-full px-4 py-2 text-xs font-medium text-ink transition-transform hover:scale-105"
-                      >
-                        <Github className="h-3 w-3" /> {t("portfolio.github")}
-                      </a>
+                      {p.canvaLink !== undefined ? (
+                        <a
+                          href={p.canvaLink || "#"}
+                          target={p.canvaLink && p.canvaLink !== "#" ? "_blank" : undefined}
+                          rel={p.canvaLink && p.canvaLink !== "#" ? "noopener noreferrer" : undefined}
+                          className="glass inline-flex items-center gap-1.5 rounded-full px-4 py-2 text-xs font-medium text-ink transition-transform hover:scale-105"
+                        >
+                          <Palette className="h-3 w-3" /> Canva
+                        </a>
+                      ) : (
+                        <a
+                          href={p.githubLink || "#"}
+                          target={p.githubLink ? "_blank" : undefined}
+                          rel={p.githubLink ? "noopener noreferrer" : undefined}
+                          className="glass inline-flex items-center gap-1.5 rounded-full px-4 py-2 text-xs font-medium text-ink transition-transform hover:scale-105"
+                        >
+                          <Github className="h-3 w-3" /> {t("portfolio.github")}
+                        </a>
+                      )}
                     </div>
                   </div>
                 </GlassCard>
