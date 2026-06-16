@@ -1,6 +1,6 @@
 import { useState } from "react";
 import { motion, AnimatePresence } from "framer-motion";
-import { ArrowUpRight, Github, Palette } from "lucide-react";
+import { ArrowUpRight, Github, Palette, Figma } from "lucide-react";
 import { SectionHeading } from "./SectionHeading";
 import { GlassCard } from "./GlassCard";
 import { cn } from "@/lib/utils";
@@ -19,13 +19,15 @@ export function Portfolio() {
   const { t } = useLanguage();
   const [active, setActive] = useState<Cat>("All");
 
-  const projects: { titleKey: string; descKey: string; stack: string[]; cat: Exclude<Cat, "All">; img: string; liveLink?: string; githubLink?: string; canvaLink?: string }[] = [
+  const projects: { titleKey: string; descKey: string; stack: string[]; cat: Exclude<Cat, "All">; img: string; liveLink?: string; liveLabelKey?: string; githubLink?: string; canvaLink?: string; figmaLink?: string }[] = [
     {
       titleKey: "proj.sikom.title",
       descKey: "proj.sikom.desc",
       stack: ["website", "front-end", "landing page"],
       cat: "Web",
       img: webImg,
+      liveLink: "https://portofolio1vinto.netlify.app/",
+      githubLink: "https://github.com/VintoDSW/website-portfolio-pertama",
     },
     {
       titleKey: "proj.mobile.title",
@@ -33,6 +35,9 @@ export function Portfolio() {
       stack: ["mobile", "front-end", "flutter"],
       cat: "Mobile",
       img: flutterImg,
+      liveLabelKey: "portfolio.viewUI",
+      liveLink: "https://drive.google.com/drive/folders/12qgGjjT-7jMvWK6nf-Znnr0ZDFG5RL6w?usp=sharing",
+      githubLink: "https://github.com/VintoDSW/Tukareen_project",
     },
     {
       titleKey: "proj.ai.title",
@@ -41,7 +46,6 @@ export function Portfolio() {
       cat: "AI",
       img: n8nImg,
       liveLink: "https://t.me/Devfest_Vinto_Automation_bot",
-      githubLink: "https://github.com/VintoDSW/website-portfolio-pertama",
     },
     {
       titleKey: "proj.innov.title",
@@ -49,6 +53,9 @@ export function Portfolio() {
       stack: ["UI/UX", "prototype", "team competition"],
       cat: "UI/UX",
       img: uiuxImg,
+      liveLabelKey: "portfolio.viewUI",
+      liveLink: "https://drive.google.com/drive/folders/12vyuse30jx_kkrgVaL-UeTcE35hIiQq2",
+      figmaLink: "https://www.figma.com/design/XPlgZsePwDk9sIuP0NO65V/PROJECT-INVENTION-UNUD-2025--Copy-?node-id=537-2746&p=f",
     },
     {
       titleKey: "proj.hso.title",
@@ -56,7 +63,9 @@ export function Portfolio() {
       stack: ["Graphic Design", "Product Tag", "Seal"],
       cat: "Design",
       img: hsoImg,
-      canvaLink: "#",
+      liveLink: "https://drive.google.com/drive/folders/1hW_n9BZxJtVoI6V_TzhGn754JTedxW0J",
+      liveLabelKey: "portfolio.viewDesign",
+      canvaLink: "https://www.canva.com/design/DAG-fmmzZoQ/c6u5vBFC0P5D4RJS1q3Gpw/edit",
     },
   ];
 
@@ -133,9 +142,18 @@ export function Portfolio() {
                         rel={p.liveLink ? "noopener noreferrer" : undefined}
                         className="inline-flex items-center gap-1.5 rounded-full bg-ink px-4 py-2 text-xs font-medium text-background transition-transform hover:scale-105"
                       >
-                        {t("portfolio.live")} <ArrowUpRight className="h-3 w-3" />
+                        {t(p.liveLabelKey || "portfolio.live")} <ArrowUpRight className="h-3 w-3" />
                       </a>
-                      {p.canvaLink !== undefined ? (
+                      {p.figmaLink !== undefined ? (
+                        <a
+                          href={p.figmaLink || "#"}
+                          target={p.figmaLink && p.figmaLink !== "#" ? "_blank" : undefined}
+                          rel={p.figmaLink && p.figmaLink !== "#" ? "noopener noreferrer" : undefined}
+                          className="glass inline-flex items-center gap-1.5 rounded-full px-4 py-2 text-xs font-medium text-ink transition-transform hover:scale-105"
+                        >
+                          <Figma className="h-3 w-3" /> Figma
+                        </a>
+                      ) : p.canvaLink !== undefined ? (
                         <a
                           href={p.canvaLink || "#"}
                           target={p.canvaLink && p.canvaLink !== "#" ? "_blank" : undefined}

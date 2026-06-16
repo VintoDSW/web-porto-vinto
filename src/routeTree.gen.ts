@@ -12,6 +12,7 @@ import { Route as rootRouteImport } from './routes/__root'
 import { Route as SkillsRouteImport } from './routes/skills'
 import { Route as PortfolioRouteImport } from './routes/portfolio'
 import { Route as MoreRouteImport } from './routes/more'
+import { Route as EducationRouteImport } from './routes/education'
 import { Route as ContactRouteImport } from './routes/contact'
 import { Route as BlogRouteImport } from './routes/blog'
 import { Route as AboutRouteImport } from './routes/about'
@@ -30,6 +31,11 @@ const PortfolioRoute = PortfolioRouteImport.update({
 const MoreRoute = MoreRouteImport.update({
   id: '/more',
   path: '/more',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const EducationRoute = EducationRouteImport.update({
+  id: '/education',
+  path: '/education',
   getParentRoute: () => rootRouteImport,
 } as any)
 const ContactRoute = ContactRouteImport.update({
@@ -58,6 +64,7 @@ export interface FileRoutesByFullPath {
   '/about': typeof AboutRoute
   '/blog': typeof BlogRoute
   '/contact': typeof ContactRoute
+  '/education': typeof EducationRoute
   '/more': typeof MoreRoute
   '/portfolio': typeof PortfolioRoute
   '/skills': typeof SkillsRoute
@@ -67,6 +74,7 @@ export interface FileRoutesByTo {
   '/about': typeof AboutRoute
   '/blog': typeof BlogRoute
   '/contact': typeof ContactRoute
+  '/education': typeof EducationRoute
   '/more': typeof MoreRoute
   '/portfolio': typeof PortfolioRoute
   '/skills': typeof SkillsRoute
@@ -77,6 +85,7 @@ export interface FileRoutesById {
   '/about': typeof AboutRoute
   '/blog': typeof BlogRoute
   '/contact': typeof ContactRoute
+  '/education': typeof EducationRoute
   '/more': typeof MoreRoute
   '/portfolio': typeof PortfolioRoute
   '/skills': typeof SkillsRoute
@@ -88,17 +97,27 @@ export interface FileRouteTypes {
     | '/about'
     | '/blog'
     | '/contact'
+    | '/education'
     | '/more'
     | '/portfolio'
     | '/skills'
   fileRoutesByTo: FileRoutesByTo
-  to: '/' | '/about' | '/blog' | '/contact' | '/more' | '/portfolio' | '/skills'
+  to:
+    | '/'
+    | '/about'
+    | '/blog'
+    | '/contact'
+    | '/education'
+    | '/more'
+    | '/portfolio'
+    | '/skills'
   id:
     | '__root__'
     | '/'
     | '/about'
     | '/blog'
     | '/contact'
+    | '/education'
     | '/more'
     | '/portfolio'
     | '/skills'
@@ -109,6 +128,7 @@ export interface RootRouteChildren {
   AboutRoute: typeof AboutRoute
   BlogRoute: typeof BlogRoute
   ContactRoute: typeof ContactRoute
+  EducationRoute: typeof EducationRoute
   MoreRoute: typeof MoreRoute
   PortfolioRoute: typeof PortfolioRoute
   SkillsRoute: typeof SkillsRoute
@@ -135,6 +155,13 @@ declare module '@tanstack/react-router' {
       path: '/more'
       fullPath: '/more'
       preLoaderRoute: typeof MoreRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/education': {
+      id: '/education'
+      path: '/education'
+      fullPath: '/education'
+      preLoaderRoute: typeof EducationRouteImport
       parentRoute: typeof rootRouteImport
     }
     '/contact': {
@@ -173,6 +200,7 @@ const rootRouteChildren: RootRouteChildren = {
   AboutRoute: AboutRoute,
   BlogRoute: BlogRoute,
   ContactRoute: ContactRoute,
+  EducationRoute: EducationRoute,
   MoreRoute: MoreRoute,
   PortfolioRoute: PortfolioRoute,
   SkillsRoute: SkillsRoute,

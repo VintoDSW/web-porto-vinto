@@ -3,7 +3,7 @@ import { SectionHeading } from "./SectionHeading";
 import { GlassCard } from "./GlassCard";
 import { useLanguage } from "@/hooks/use-language";
 
-const tools = ["Figma", "Lovable", "Canva", "LLM (ChatGPT, Gemini)", "GitHub", "Antigravity"];
+const tools = ["Figma", "Notion", "Canva", "LLM (ChatGPT, Gemini)", "GitHub", "Antigravity"];
 
 export function Skills() {
   const { t } = useLanguage();

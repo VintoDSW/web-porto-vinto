@@ -132,10 +132,7 @@ export function Hero() {
             transition={{ repeat: Infinity, duration: 6, ease: "easeInOut" }}
           >
             <motion.div
-              drag
-              dragConstraints={{ left: -100, right: 100, top: -100, bottom: 100 }}
-              whileDrag={{ scale: 1.02 }}
-              className="glass-strong relative overflow-hidden rounded-[2rem] p-3 cursor-grab active:cursor-grabbing"
+              className="glass-strong relative overflow-hidden rounded-[2rem] p-3"
             >
               <div className="absolute inset-0 opacity-60" style={{ background: "var(--gradient-sheen)" }} />
               <div className="relative aspect-[4/5] overflow-hidden rounded-[1.5rem] bg-ink/5 pointer-events-none">
@@ -172,10 +169,7 @@ export function Hero() {
               transition={{ repeat: Infinity, duration: 5, ease: "easeInOut", delay: 1 }}
             >
               <motion.div
-                drag
-                dragConstraints={{ left: -150, right: 150, top: -150, bottom: 150 }}
-                whileDrag={{ scale: 1.1 }}
-                className="glass rounded-2xl px-4 py-3 cursor-grab active:cursor-grabbing"
+                className="glass rounded-2xl px-4 py-3"
               >
                 <div className="flex items-center gap-3 pointer-events-none">
                   <div className="h-2 w-2 animate-pulse rounded-full bg-emerald-500" />
